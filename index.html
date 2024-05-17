@@ -13,35 +13,37 @@
         <table id="Calculator"> 
             <tr> 
                 <td colspan="3"> 
-                    <input type="text" id="result"> 
+                    <input type="text" id="result" readonly> 
                 </td> 
-                <td><input type="button" value="c"></td> 
+                <td><input type="button" value="c" class="btn" onclick="clearDisplay()"></td> 
             </tr> 
       
             <tr> 
-                <td><input type="button" value="1"></td> 
-                <td><input type="button" value="2"></td> 
-                <td><input type="button" value="3"></td> 
-                <td><input type="button" value="/"></td> 
+                <td><input type="button" onclick="appendToDisplay('1')" value="1" class="btn" ></td> 
+                <td><input type="button" onclick="appendToDisplay('2')" value="2" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('3')" value="3" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('/')" value="/" class="btn"></td> 
             </tr> 
             <tr> 
-                <td><input type="button" value="4"></td> 
-                <td><input type="button" value="5"></td> 
-                <td><input type="button" value="6"></td> 
-                <td><input type="button" value="*"></td> 
+                <td><input type="button" onclick="appendToDisplay('4')" value="4" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('5')" value="5" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('6')" value="6" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('*')" value="*" class="btn"></td> 
             </tr> 
             <tr> 
-                <td><input type="button" value="7"></td> 
-                <td><input type="button" value="8"></td> 
-                <td><input type="button" value="9"></td> 
-                <td><input type="button" value="-"></td> 
+                <td><input type="button" onclick="appendToDisplay('7')" value="7" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('8')" value="8" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('9')" value="9" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('-')" value="-" class="btn"></td> 
             </tr> 
             <tr> 
-                <td><input type="button" value="0"></td> 
-                <td><input type="button" value="."></td> 
-                <td><input type="button" value="="></td> 
-                <td><input type="button" value="+"></td> 
+                <td><input type="button" onclick="appendToDisplay('0')" value="0" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('.')" value="." class="btn"></td> 
+                <td><input type="button" onclick="calculate()" value="=" class="btn"></td> 
+                <td><input type="button" onclick="appendToDisplay('+')" value="+" class="btn"></td> 
             </tr> 
         </table> 
+        
+        <script src="./script/code.js"></script>
 </body>
 </html>

@@ -35,3 +35,8 @@ input[type="text"] {
   border-radius: 50px;
   border: 2px solid black;
 }
+
+.btn:hover {
+  background-color: white;
+  color: palevioletred;
+}

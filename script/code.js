@@ -1,13 +1,28 @@
-function appendToDisplay(value) {
-  document.getElementById('result').value += value;
-}
+document.addEventListener("DOMContentLoaded", function() {
+  let resultField = document.getElementById("result");
+  let clearButton = document.getElementById("clear");
+  let calculateButton = document.getElementById("calculate");
 
-function clearDisplay() {
-  document.getElementById('result').value = '';
-}
+  // Clear display function
+  clearButton.addEventListener("click", function() {
+      resultField.value = "";
+  });
 
-function calculate() {
-  var display = document.getElementById('result').value;
-  var result = eval(display);
-  document.getElementById('result').value = result;
-}
+  let appendToDisplay = function(value) {
+      resultField.value += value;
+  };
+
+  // Calculating the result
+  calculateButton.addEventListener("click", function() {
+      let expression = resultField.value;
+      let result = eval(expression);
+      resultField.value = result;
+  });
+
+  const buttons = document.querySelectorAll(".btn:not(#clear):not(#calculate)");
+  buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+          appendToDisplay(button.value);
+      });
+  });
+});
